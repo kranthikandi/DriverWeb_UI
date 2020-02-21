@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meega Trucking - Invoice page</title>
+  <meta name="description" content="Responsive, Bootstrap, BS4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  <!-- DataTable -->
+  <link rel="stylesheet" href="libs/DataTables/datatables.css" type="text/css" />
+  <!-- xdan date time picker -->
+  <!-- documentation https://xdsoft.net/jqplugins/datetimepicker/ -->
+  <link href="libs/datetimepicker-master/build/jquery.datetimepicker.min.css" rel="stylesheet">
+  <link href="libs/datetimepicker-master/daterangepicker.css" rel="stylesheet">
+  <link href="libs/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app" id="app">
+
+    <!-- ############ LAYOUT START-->
+
+    <!-- aside -->
+    <div id="aside" class="app-aside fade nav-dropdown black">
+      <!-- fluid app aside -->
+      <div class="navside dk" data-layout="column">
+        <div class="navbar no-radius">
+          <!-- brand -->
+          <a href="dashboard.html" class="navbar-brand">
+            <div data-ui-include="'images/logo.svg'"></div>
+            <img src="images/logo.png" alt="." class="hide">
+            <span class="hidden-folded inline">Meega Trucking</span>
+          </a>
+          <!-- / brand -->
+        </div>
+        <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
+            <ul class="nav" data-ui-nav>
+              <li class="nav-header hidden-folded">
+                <span class="text-xs">Main</span>
+              </li>
+              <li>
+                <a class="b-danger">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade danger">
+                    <i class="fa fa-users"></i>
+                  </span>
+                  <span class="nav-text">Directory</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="customer.html">
+                      <span class="nav-text">Customers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="driver.html">
+                      <span class="nav-text">IC Driver</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee.html">
+                      <span class="nav-text">Employee</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-success">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="ion-android-apps"></i>
+                  </span>
+                  <span class="nav-text">Dispatch</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="dispatch.html">
+                      <span class="nav-text">Dispatch</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="FrightBills.html">
+                      <span class="nav-text">FreightBills</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="invoice.html">
+                      <span class="nav-text">Invoice</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-warning">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="fa fa-dollar"></i>
+                  </span>
+                  <span class="nav-text">Accounts</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="receivable.html">
+                      <span class="nav-text">Receivables</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="payable.html">
+                      <span class="nav-text">Payables</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <div data-flex-no-shrink class="sw">
+          <div class="nav-fold ">
+            <a>
+              <div class="pull-left">
+                <div class="">
+                  <label class="md-check m-y-xs" data-target="folded">
+                    <input type="checkbox">
+                    <i></i>
+                  </label>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / -->
+
+    <!-- content -->
+    <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
+      <div class="app-header white bg b-b">
+        <div class="navbar" data-pjax>
+          <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
+            <i class="ion-navicon"></i>
+          </a>
+          <div class="navbar-item pull-left h5" id="pageTitle">Invoices</div>
+          <!-- nabar right -->
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="ion-android-search w-24"></i>
+              </a>
+              <div class="dropdown-menu text-color w-md animated fadeInUp pull-right">
+                <!-- search form -->
+                <form class="navbar-form form-inline navbar-item m-a-0 p-x v-m" role="search">
+                  <div class="form-group l-h m-a-0">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search projects...">
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn white b-a no-shadow"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+                <!-- / search form -->
+              </div>
+            </li>
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <i class="ion-android-notifications-none w-24"></i>
+                <span class="label up p-a-0 danger"></span>
+              </a>
+              <!-- dropdown -->
+              <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
+                <div class="scrollable" style="max-height: 220px">
+                  <ul class="list-group list-group-gap m-a-0">
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a0.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        Use awesome <a href="#" class="text-primary">animate.css</a><br>
+                        <small class="text-muted">10 minutes ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a1.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Joe</a> Added you as friend<br>
+                        <small class="text-muted">2 hours ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white text-color box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a2.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Danie</a> sent you a message<br>
+                        <small class="text-muted">1 day ago</small>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- / dropdown -->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <span class="avatar w-32">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+                    <circle cx="24" cy="24" r="24" />
+                    <circle cx="24" cy="0" r="2" class="brand-animate" />
+                    <text id="UserN" dy="10" x="50%" y="50%" text-anchor="middle"
+                      style="fill: #ffffff; stroke: none; font-size: 30px;"></text>
+                  </svg>
+
+                </span>
+              </a>
+              <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                <a class="dropdown-item" href="dashboard.html">
+                  <span>Dashboard</span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="">
+                  <!-- Need help? -->
+                </a>
+                <a class="dropdown-item" href="" id="signOut">Sign out</a>
+              </div>
+            </li>
+          </ul>
+          <!-- / navbar right -->
+        </div>
+      </div>
+      <div class="app-footer white bg p-a b-t">
+        <div class="pull-right text-sm text-muted">Version 1.0.1</div>
+        <span class="text-sm text-muted">&copy; Copyright.</span>
+      </div>
+      <div class="app-body">
+
+        <!-- ############ PAGE START-->
+        <!-- only need a height for layout 4 -->
+        <div class="padding non-printable">
+          <div class="box" id="invoices">
+            <div class="b-b b-primary nav-active-primary m-t-1 m-l-1">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" data-toggle="tab" data-target="#CustBills">By Customers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tab" data-target="#AllInv">Invoices</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#" data-toggle="tab" data-target="#Bills">All
+                    Bills</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content m-a-sm">
+              <div id="Bills" data-ui-jp="nestable" class=" tab-pane animated fadeIn text-muted">
+                <table class="table" id="AllTags">
+                  <thead>
+                    <th>Date</th>
+                    <th>Tag ID</th>
+                    <th>Bill To</th>
+                    <th>JoB Name</th>
+                    <th>Truck</th>
+                    <th>Driver</th>
+                    <th>Location</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>Total</th>
+                  </thead>
+                </table>
+              </div>
+              <div id="CustBills" data-ui-jp="nestable" class="active tab-pane animated fadeIn text-muted">
+                <div class="row m-t-xs">
+                  <div class="col-md-3">
+                    <span class="NewFtCustSpan">
+                      <div class="input-group">
+                        <span class="input-group-addon">Bill To</span>
+                        <input id="NewFtCust" placeholder="Customer" title="type &quot;a&quot;"
+                          class="form-control newFtBill">
+                      </div>
+                    </span>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="navbar-item pull-right ">
+                      <input type="text" id="DateRange" class="form-control" style="width:215px">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <button class="btn btn-success" id="SeleAll">Select All</button>
+                    <button class="btn btn-light" id="Clear">Clear All</button>
+                  </div>
+                  <div class="col-md-3">
+                    <button class="btn btn-info" id="Preview">Preview</button>
+                  </div>
+                </div>
+                <table class="table" id="CustTags">
+                  <thead>
+                    <th>Date</th>
+                    <th>Tag ID</th>
+                    <th>JoB Name</th>
+                    <th>Truck</th>
+                    <th>Location</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>Total</th>
+                  </thead>
+                </table>
+              </div>
+              <div id="AllInv" class="tab-pane animated fadeIn text-muted">
+                <table id="AllInvTab" class="table">
+                  <thead>
+                    <tr>
+                      <th>Invoice No</th>
+                      <th>Inv Date</th>
+                      <th>Customer</th>
+                      <th>Total</th>
+                      <th>Tags</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="allInvBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- <div id="noJobs" class="noJobs" style="display: none">
+              <pre class=" noJob pull-center">No Invoice in this time period</pre>
+            </div> -->
+
+          <div id="invAnimation" class="box padding" style="display: none; height: 0%;">
+            <div>
+              <button class="btn btn-default pull-right hidden-print hideInv" id="">
+                <i class="fa fa-times"></i>
+              </button>
+              <button class="btn btn-primary pull-right hidden-print" id="Invoice">Invoice</button>
+              <span class="print">
+                <a href="#" class="btn btn-info pull-right hidden-print m-r-1">
+                  <i class="fa fa-download"></i>
+                </a>
+              </span>
+              <button class="btn danger non-printable pull-right m-r-1" id='archiveInv'><i
+                  class="fa fa-trash"></i></button>
+              <button class="btn btn-default pull-left hidden-print hideInv primary smallButton">
+                <i class="fa fa-angle-double-left"></i>
+              </button>
+            </div>
+            <div id='createPDF'>
+              <br>
+              <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 ">
+                  <h4 class="text-md m-t-lg"><strong>Sunny Trucking Inc.</strong></h4>
+                  <span>3249 W Jackson Street #511</span><br>
+                  <span>Hayward, CA 94544</span><br>
+                  <span>Office: (510) 715-8262</span><br>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <p class="text-md m-t-lg">
+                    <span>Invoice ID : </span>
+                    <span id="invId" data-invFullId="000" class="invForm"></span>
+                  </p>
+                  <p>
+                    <span>Date : </span>
+                    <input type="date" id="invDate" class="invForm" />
+                    <span id="InvIdTrue" class="invForm "></span>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="p-a">
+                    <!-- <strong class="text-muted">TO:</strong><br> -->
+                    <span id="custName" class="invForm"></span>
+                    <p class="text-muted">
+                      <span id="add1" class="invForm"></span><br>
+                      <span id="add2" class="invForm"></span><br>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-a">
+                    <strong class="text-muted"></strong><br>
+                    <span id="">Customer ID : </span>
+                    <span id="custId" class="invForm"></span><br>
+                    <span id="">Job Name : </span>
+                    <span id="JobName" class="invForm"></span>
+                    <p class="text-muted">
+                      <span id="" class="invForm"></span><br>
+                      <span id="" class="invForm"></span><br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </br>
+              </br>
+              </br>
+              <div>
+                <table id="invTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Freight Bill</th>
+                      <th>Job Details</th>
+                      <!-- <th>Driver</th> -->
+                      <th style="width: 140px">QTY</th>
+                      <th>Rate</th>
+                      <th style="width: 90px">TOTAL</th>
+                    </tr>
+                  </thead>
+                  <tbody id="QTYTotal">
+
+                  </tbody>
+                </table>
+                <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4 ">
+                    <p class="p-a" id="statusComment"> </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <table id="qtyview" class="table" style="width: 25%">
+                </table>
+              </div>
+              <div style="height:300px !important;">
+
+              </div>
+              <div class="">
+                <table id="FTotal" class="dark-border pull-right">
+                  <tr>
+                    <td>Pay Total</td>
+                    <td id="pTot"></td>
+                  </tr>
+                </table>
+              </div>
+              <div>
+                <p class="p-a">
+                  <strong>Thank you for your business</strong><br>
+                  This invoice is due in 15 days from date of invoiced.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- FT bill Info Modal  -->
+        <div id="FtBillShow" class="modal fade animate" data-backdrop="true" style="display: none">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a data-dismiss="modal" class="pull-right text-muted m-r-sm">×</a>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <div class="box m-t-1">
+                  <div class="box-body p-v-md">
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <div class="input-group">
+                          <span class="input-group-addon">FT Bill</span>
+                          <input type="text" placeholder="Freight Bill" class=" tag_id form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="input-group">
+                          <span class="input-group-addon">Cust ID</span>
+                          <input type="text" id="" placeholder="Customer Id"
+                            class=" customer_id form-control job-form ccfrm" disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-5">
+                        <div class="input-group">
+                          <span class="input-group-addon">Cust Name</span>
+                          <input type="text" id="" placeholder="Customer name"
+                            class="customer_name form-control job-form ccfrm" disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row m-t-sm">
+                      <div class="col-xs-3">
+                        <div class="input-group">
+                          <span class="input-group-addon">Job Type</span>
+                          <input type="text" id="" placeholder="Job Type" class="job_type form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="input-group">
+                          <span class="input-group-addon">Job ID</span>
+                          <input type="text" id="" placeholder="Job ID" class="job_id form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-5">
+                        <div class="input-group">
+                          <span class="input-group-addon">Job Name</span>
+                          <input type="text" id="" placeholder="Job Name" class=" job_name form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row m-t-sm">
+                      <div class="col-xs-8">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-group ">
+                              <span class="input-group-addon">Driver Id</span>
+                              <input id="driverId" placeholder="Driver ID" class="DriverId form-control job-form ccfrm"
+                                disabled>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-group col-md-6">
+                              <span class="input-group-addon">Driver Name</span>
+                              <input id="" placeholder="Driver Name" class="DriverName form-control job-form ccfrm"
+                                disabled>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row m-t-sm">
+                          <div class="col-md-6">
+                            <div class="input-group ">
+                              <span class="input-group-addon">Truck Id</span>
+                              <input type="text" id="" placeholder="Truck ID"
+                                class="Truck_id invoiced form-control job-form ccfrm">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-group col-md-6">
+                              <span class="input-group-addon">Truck Type</span>
+                              <input type="text" id="" placeholder="Truck Type"
+                                class="Truck_name form-control job-form ccfrm" disabled>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <textarea id="" class="invoiced DisNotes form-control ccfrm" placeholder="Notes"
+                          rows="4"></textarea>
+                      </div>
+                    </div>
+                    <div class="row m-t-sm">
+                      <div class="col-xs-4">
+                        <div class="input-group">
+                          <span class="input-group-addon">Date</span>
+                          <input type="text" id="" placeholder="Time" class=" FTDispDate form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="input-group">
+                          <span class="input-group-addon">Time</span>
+                          <input type="text" id="" placeholder="Date" class="FTDispTime form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="input-group">
+                          <span class="input-group-addon">Job Site</span>
+                          <input type="text" id="" placeholder="Time" class="JobLoc form-control job-form ccfrm"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row m-t-sm">
+                      <div class="col-xs-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">Point A</span>
+                          <input type="text" id="" class="invoiced locA form-control"
+                            placeholder="Job Site/Pickup Site">
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">Point B</span>
+                          <input type="text" id="" class="locB invoiced form-control"
+                            placeholder="Job Site/Pickup Site">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box m-t-1">
+                  <div class="box-body">
+                    <span>Billing</span>
+                    <div class="row m-t-1">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Hourly</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BHQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BHRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BHTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Load</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BLQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BLRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BLTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Ton</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BTQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BTRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BTTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Toll</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BTollQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BTollRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BTollTotal" value=100
+                          class="textbox_3 invoiced form-control ccfrm binput" placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Dump Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BDFQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BDFRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BDFTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">StandBy Time</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BSTQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BSTRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BSTTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Material Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="BMQty" class="textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="BMRate" class="textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BMTax" class="textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Tax">
+                        <input type="number" id="BMTotal" class="textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row m-t-1">
+                      <div class="textbox_5" style="float:right">
+                        <div class="input-group">
+                          <span class="input-group-addon">Total $</span>
+                          <input type="number" id="btotal" class="invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box m-t-1">
+                  <div class="box-body">
+                    <span>Paying</span>
+                    <div class="row m-t-1">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Hourly</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PHQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="PHRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PHTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Load</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PLQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="PLRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PLTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Ton</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PTQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="PTRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PTTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Toll</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PTollQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="PTollRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PTollTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Dump Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PDFQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="PDFRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PDFTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">StandBy Time</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="PSTQty" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="PSTRate" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="PSTTotal" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Broker Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <span class="textbox_3" style="color: #ffffff"> --</span>
+                        <input type="number" id="FeePercent" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="BrokerFee" class="textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row m-t-1">
+                      <div class="col-md-8 row">
+                        <span style="float: right; line-height: 38px;"></span>
+                        <span id="DriFee"></span>
+                        <span id="DriFeeAmt"></span>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="input-group">
+                          <span class="input-group-addon">Gross $</span>
+                          <input type="number" id="ptotal" class="invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="input-group">
+                          <span class="input-group-addon">Net $</span>
+                          <input type="number" id="pNetTot" class="invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box m-t-1">
+                  <div class="box-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label>Last Updated By: </label>
+                        <span id="updatedBy" class="text-primary ccfrm"></span>
+                      </div>
+                      <div class="col-md-4">
+                        <label>Last Updated Date: </label>
+                        <span id="updatedDate" class="text-primary ccfrm"></span>
+                      </div>
+                      <div class="col-md-4">
+                        <button id="FTCancel" data-dismiss="modal" class="btn white">Cancel</button>
+                        <!-- <button id="FTSave" class="btn success">Save</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+
+
+        <!-- Inv Print Modal  -->
+        <div id="EditInv" class="modal black-overlay in" data-backdrop="true" style="display: none;">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="pull-left">
+                  <span> Tag ID: </span>
+                  <span class="tagId"></span>
+                  <span style="padding-left: 15px;"> Tag Date: </span>
+                  <strong><span id="tagDate"></span></strong>
+                </h5>
+                <a data-dismiss="modal" class="pull-right text-muted">×</a>
+              </div>
+              <div class="InvBody modal-body text-center p-lg printable">
+                <div class="box m-t-1">
+                  <div class="box-body">
+                    <span>Billing : </span> <strong><span id="EditCust"></span></strong>
+                    <div class="row m-t-1">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Hourly</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class=" BHQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BHRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BHTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Load</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BLQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BLRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BLTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Ton</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BTQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BTRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BTTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Toll</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BTollQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BTollRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" value=100
+                          class="BTollTotal textbox_3 invoiced form-control ccfrm binput" placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Dump Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BDFQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BDFRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BDFTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">StandBy Time</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BSTQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BSTRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BSTTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Material Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="BMQty textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="BMRate textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BMTax textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Tax">
+                        <input type="number" id="" class="BMTotal textbox_4 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row m-t-1">
+                      <div class="textbox_5" style="float:right">
+                        <div class="input-group">
+                          <span class="input-group-addon">Total $</span>
+                          <input type="number" id="" class="btotal invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box m-t-1">
+                  <div class="box-body">
+                    <span>Paying : </span> <strong><span id="EditDriver"></span></strong>
+                    <div class="row m-t-1">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Hourly</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PHQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="" class="PHRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PHTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Load</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PLQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="" class="PLRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PLTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Ton</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PTQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="" id="" class="PTRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PTTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Toll</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PTollQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="PTollRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PTollTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Dump Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PDFQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="PDFRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PDFTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">StandBy Time</span>
+                      </div>
+                      <div class="textbox_2">
+                        <input type="number" id="" class="PSTQty textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Qty">
+                        <input type="number" id="" class="PSTRate textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="PSTTotal textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="textbox_2">
+                        <span class="input-group-addon AllBorder">Broker Fee</span>
+                      </div>
+                      <div class="textbox_2">
+                        <span class="textbox_3" style="color: #ffffff"> --</span>
+                        <input type="number" id="" class="FeePercent textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Rate">
+                        <input type="number" id="" class="BrokerFee textbox_3 invoiced form-control ccfrm binput"
+                          placeholder="Total" disabled>
+                      </div>
+                    </div>
+                    <div class="row m-t-1">
+                      <div class="col-md-6 row">
+                        <span style="float: right; line-height: 38px;"></span>
+                        <span id="DriFee"></span>
+                        <span id="DriFeeAmt"></span>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group">
+                          <span class="input-group-addon">Gross $</span>
+                          <input type="number" id="" class="ptotal invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="input-group">
+                          <span class="input-group-addon">Net $</span>
+                          <input type="number" id="" class="pNetTot invoiced form-control ccfrm" placeholder="$$$"
+                            disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Last Updated By: </label>
+                    <span id="" class="updatedBy text-primary ccfrm"></span>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Last Updated Date: </label>
+                    <span id="" class="updatedDate text-primary ccfrm"></span>
+                  </div>
+                  <div class="col-md-4">
+                    <button data-dismiss="modal" class="btn white">Cancel</button>
+                    <button id="newFTUpdate" class="btn success">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="DeleteInv" class="modal fade animate" data-backdrop="true" style="display: none">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a data-dismiss="modal" class="pull-right text-muted text-lg p-a-sm m-r-sm">×</a>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <p>Are you sure you want to delete this Invoice</p>
+              </div>
+              <div class="modal-footer">
+                <div class="row">
+                  <div class="col-md-6"></div>
+                  <div class="col-md-6">
+                    <button class="btn dark-white p-x-md" data-dismiss="modal">No</button>
+                    <button class="btn btn-danger p-x-md" id="DelInv">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ############ PAGE END-->
+
+      </div>
+    </div>
+    <!-- / -->
+
+
+    <!-- ############ SWITHCHER START-->
+    <div id="switcher">
+      <div class="switcher dark-white" id="sw-theme">
+        <a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme" class="dark-white sw-btn">
+          <i class="fa fa-gear text-muted"></i>
+        </a>
+        <div class="box-header">
+          <a href="https://themeforest.net/item/aside-dashboard-ui-kit/17903768?ref=flatfull"
+            class="btn btn-xs rounded danger pull-right">BUY</a>
+          <strong>Theme Switcher</strong>
+        </div>
+        <div class="box-divider"></div>
+        <div class="box-body">
+          <p id="settingLayout" class="hidden-md-down">
+            <label class="md-check m-y-xs" data-target="folded">
+              <input type="checkbox">
+              <i></i>
+              <span>Folded Aside</span>
+            </label>
+            <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
+              <span class="fa fa-expand fa-fw m-r-xs"></span>
+              <span>Fullscreen Mode</span>
+            </label>
+          </p>
+          <p>Colors:</p>
+          <p data-target="color">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="primary">
+              <i class="primary"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="accent">
+              <i class="accent"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warn">
+              <i class="warn"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="success">
+              <i class="success"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="info">
+              <i class="info"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warning">
+              <i class="warning"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="danger">
+              <i class="danger"></i>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="clearfix">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-lg">
+              <input type="radio" name="theme" value="">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="grey">
+              <i class="grey"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="dark">
+              <i class="dark"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="black">
+              <i class="black"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ############ SWITHCHER END-->
+
+    <!-- ############ LAYOUT END-->
+  </div>
+
+  <!-- build:js scripts/app.min.js -->
+  <!-- jspdf  -->
+  <script src="libs/jquery/jspdf.js"></script>
+  <script src="libs/jquery/jspdf.debug.js"></script>
+  <script src="libs/jquery/jspdf.plugin.autotable.js"></script>
+
+  <!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+  <!-- table to json  -->
+  <script src="libs/jquery/dist/TableToJson.min.js"></script>
+  <!-- datatable -->
+  <!-- <script src="libs/DataTables/datatables.js"></script> -->
+  <script src="libs/DataTables/datatables.js"></script>
+  <script src="libs/DataTables/dataTables.buttons.min.js"></script>
+  <script src="libs/DataTables/buttons.flash.min.js"></script>
+  <script src="libs/DataTables/jszip.min.js"></script>
+  <script src="libs/DataTables/pdfmake.min.js"></script>
+  <script src="libs/DataTables/vfs_fonts.js"></script>
+  <script src="libs/DataTables/buttons.html5.min.js"></script>
+  <script src="libs/DataTables/buttons.print.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+  <script src="libs/blockUI/jquery.blockUI.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+  <script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-modal.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-list.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/ajax.js"></script>
+  <!-- momet js -->
+  <script src="libs/moment/moment.js"></script>
+  <script src="libs/chart.js/dist/Chart.js"></script>
+  <script src="libs/chart.js/dist/util.js"></script>
+
+  <script src="scripts/dispatch.js"></script>
+  <script src="scripts/invocing.js"></script>
+  <script src="scripts/createPdf.js"></script>
+
+  <!-- xdan date time picker -->
+  <script src="libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+  <script src="libs/datetimepicker-master/daterangepicker.min.js"></script>
+
+  <!-- endbuild -->
+
+  <!-- underscore JS -->
+  <script src="libs/underscore/underscore-min.js"></script>
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meega Trucking - Customer Page</title>
+  <meta name="description" content="Responsive, Bootstrap, BS4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+
+  <link rel="stylesheet" href="libs/DataTables/datatables.css" type="text/css" />
+
+  <!-- xdan date time picker -->
+  <!-- documentation https://xdsoft.net/jqplugins/datetimepicker/ -->
+  <link href="libs/datetimepicker-master/build/jquery.datetimepicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="app" id="app">
+
+    <!-- ############ LAYOUT START-->
+
+    <!-- aside -->
+    <div id="aside" class="app-aside fade nav-dropdown black">
+      <!-- fluid app aside -->
+      <div class="navside dk" data-layout="column">
+        <div class="navbar no-radius">
+          <!-- brand -->
+          <a href="dashboard.html" class="navbar-brand">
+            <div data-ui-include="'images/logo.svg'"></div>
+            <img src="images/logo.png" alt="." class="hide">
+            <span class="hidden-folded inline">Meega Trucking</span>
+          </a>
+          <!-- / brand -->
+        </div>
+        <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
+            <ul class="nav" data-ui-nav>
+              <li>
+                <a class="b-danger">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade danger">
+                    <i class="fa fa-users"></i>
+                  </span>
+                  <span class="nav-text">Directory</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="customer.html">
+                      <span class="nav-text">Customers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="driver.html">
+                      <span class="nav-text">IC Driver</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee.html">
+                      <span class="nav-text">Employee</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-success">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="ion-android-apps"></i>
+                  </span>
+                  <span class="nav-text">Dispatch</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="dispatch.html">
+                      <span class="nav-text">Dispatch</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="FrightBills.html">
+                      <span class="nav-text">FreightBills</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="invoice.html">
+                      <span class="nav-text">Invoice</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-warning">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="fa fa-dollar"></i>
+                  </span>
+                  <span class="nav-text">Accounts</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="receivable.html">
+                      <span class="nav-text">Receivables</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="payable.html">
+                      <span class="nav-text">Payables</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div data-flex-no-shrink class="sw">
+          <div class="nav-fold ">
+            <a>
+              <div class="pull-left">
+                <div class="">
+                  <label class="md-check m-y-xs" data-target="folded">
+                    <input type="checkbox">
+                    <i></i>
+                  </label>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / -->
+
+    <!-- content -->
+    <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
+      <div class="app-header white bg b-b">
+        <div class="navbar" data-pjax>
+          <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
+            <i class="ion-navicon"></i>
+          </a>
+          <div class="navbar-item pull-left h5 row" style="font-size: large;" id="pageTitle">
+            <ol class="breadcrumb headercrumb" id="headercrumb">
+
+              <li class="breadcrumb-item"><a id="customerCrumb" class="customerCrumb">All Customers</a></li>
+            </ol>
+            <button class="md-btn md-fab m-b-sm primary smallButton sw-btn"><i
+                class="fa fa-angle-double-left"></i></button>
+          </div>
+          <!-- nabar right -->
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="ion-android-search w-24"></i>
+              </a>
+              <div class="dropdown-menu text-color w-md animated fadeInUp pull-right">
+                <!-- search form -->
+                <form class="navbar-form form-inline navbar-item m-a-0 p-x v-m" role="search">
+                  <div class="form-group l-h m-a-0">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search projects...">
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn white b-a no-shadow"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+                <!-- / search form -->
+              </div>
+            </li>
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link clear" data-toggle="dropdown" style="width:40px;">
+                <i class="fa fa-bullhorn w-24"></i>
+                <span class="label up p-a-0" id="dispCount" style="color:red;background-color:white"></span>
+              </a>
+              <!-- dropdown -->
+              <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
+                <div class="scrollable" style="max-height: 220px">
+                  <ul id="dispJobs" class="list-group list-group-gap m-a-0">
+                  </ul>
+                </div>
+                <div class="scrollable" style="max-height: 220px">
+                  <a href="dispatch.html" class="red pull-right">Dispatch</a>
+                </div>
+              </div>
+              <!-- / dropdown -->
+            </li>
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <i class="ion-android-notifications-none w-24"></i>
+                <span class="label up p-a-0 danger"></span>
+              </a>
+              <!-- dropdown -->
+              <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
+                <div class="scrollable" style="max-height: 220px">
+                  <ul class="list-group list-group-gap m-a-0">
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a0.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        Use awesome <a href="#" class="text-primary">animate.css</a><br>
+                        <small class="text-muted">10 minutes ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a1.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Joe</a> Added you as friend<br>
+                        <small class="text-muted">2 hours ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white text-color box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a2.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Danie</a> sent you a message<br>
+                        <small class="text-muted">1 day ago</small>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- / dropdown -->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <span class="avatar w-32">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+                    <circle cx="24" cy="24" r="24" />
+                    <circle cx="24" cy="0" r="2" class="brand-animate" />
+                    <text id="UserN" dy="10" x="50%" y="50%" text-anchor="middle"
+                      style="fill: #ffffff; stroke: none; font-size: 30px;"></text>
+                  </svg>
+                </span>
+              </a>
+              <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                <a class="dropdown-item" href="dashboard.html">
+                  <span>Dashboard</span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="">
+                  <!-- Need help? -->
+                </a>
+                <a class="dropdown-item" id="signOut" href="">Sign out</a>
+              </div>
+            </li>
+          </ul>
+          <!-- / navbar right -->
+        </div>
+      </div>
+      <div class="app-footer white bg p-a b-t">
+        <div class="pull-right text-sm text-muted">Version 1.0.1</div>
+        <span class="text-sm text-muted">&copy; Copyright.</span>
+      </div>
+      <div class="app-body">
+
+        <!-- ############ PAGE START-->
+        <!-- only need a height for layout 4 -->
+        <div class="padding">
+          <!-- customer box -->
+          <div class="box" id="customerBox">
+            <div class="addNew">
+              <button id="NewCust" class="btn btn-outline rounded b-primary text-primary" data-toggle="modal"
+                data-ui-toggle-class="fade-up" data-ui-target="#animate">Add New</button>
+            </div>
+            <div class="table-responsive">
+              <table id="driver_table" class="table table-striped b-t">
+                <thead>
+                  <tr>
+                    <!-- <th>customer_id</th>
+          <th>customer_name</th> -->
+                    <th>Cutomer ID</th>
+                    <th>Customer / Broker</th>
+                    <th>Customer Location</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody id="d_tbody">
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          <!-- job lists box -->
+          <div class="box" id="jobBox" style="display: none">
+            <div class="addNew">
+              <button id="newJob" class="btn btn-outline rounded b-primary text-primary">Add New</button>
+            </div>
+            <div class="table-responsive" id="jobTableDiv">
+            </div>
+            <div class="noJobs " style="display: none">
+              <pre class=" noJob pull-center">No Jobs for this Customer</pre>
+            </div>
+          </div>
+
+          <!-- job detals box -->
+          <div class="box" id="jobDetailsBox" style="display: none">
+            <div class="addNew">
+              <button class="btn btn-outline rounded b-primary text-primary" data-toggle="modal"
+                data-target="#boxjobDetls" data-ui-toggle-class="fade-up" data-ui-target="#animate">Add New</button>
+            </div>
+            <div class="table-responsive" id="jobTableDiv">
+            </div>
+            <div class="noJobs" style="display: none">
+              <pre>No Jobs for this Customer</pre>
+            </div>
+          </div>
+
+          <div id="Jobs" style="display:none;">
+            <div class="row" style="height: 45px;">
+              <div class="col-md-4"></div>
+              <div class="col-md-4 row" style="height:30px;line-height: 30px;">
+                <button id="config" class="btn md-raised col-md-4  r-4x blue-600 ">
+                  Configure
+                </button>
+                <button id="dispatch" class="btn md-raised col-md-4  r-4x green-600">
+                  Dispatch
+                </button>
+                <button id="jobs" class="btn md-raised col-md-4  r-4x teal-600">
+                  Jobs
+                </button>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+
+            <div class="box" id="configData" style="display: none; padding: 10px 10px 0px 10px;">
+              <div class="row">
+                <div class="form-group col-md-5 row">
+                  <label class="col-sm-3 form-control-label">Customer / Broker ID</label>
+                  <div class="col-sm-5">
+                    <input type="text" id="customer_id" class="form-control" readonly>
+                  </div>
+                </div>
+                <div class="form-group col-md-7 row">
+                  <label class="col-sm-2 form-control-label">Customer / Broker </label>
+                  <div class="col-sm-10">
+                    <input type="text" id="customer_name" class="form-control" readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-5 row">
+                  <label class="col-sm-3 form-control-label">Job ID
+                    <sapn style="display: none;"><i id="_id-jobid"></i></sapn>
+                  </label>
+                  <div class="col-sm-5">
+                    <input type="text" id="job_id" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group col-md-7 row">
+                  <label class="col-sm-2 form-control-label">Job Name
+                    <span class="text-danger">*</span>
+                  </label>
+                  <div class="col-sm-10">
+                    <input type="text" id="job_name" class="form-control job-form">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-5 row">
+                  <label class="col-sm-3 form-control-label">Start Date</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control job-form" id="startDate">
+                  </div>
+                </div>
+                <div class="form-group col-md-7 row">
+                  <label class="col-sm-2 form-control-label">Location</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="job_location" class="form-control job-form">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-4 row">
+                  <label class="col-sm-3 form-control-label">Job Type
+                    <span class="text-danger">*</span>
+                  </label>
+                  <div class="dropdown col-md-5 inline">
+                    <button class="btn white dropdown-toggle job-form" id="typebutton" data-toggle="dropdown"
+                      aria-expanded="false">Job Type</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item jobtype" id="hourly" value="hourly">Hourly</a>
+                      <a class="dropdown-item jobtype" id="ton" value="ton">Ton</a>
+                      <a class="dropdown-item jobtype" id="load" value="load">Load</a>
+                    </div>
+                  </div>
+                </div>
+                <div class=" col-md-4 row">
+                </div>
+              </div>
+              <div class=" form-group row">
+                <div class="col-md-12">
+                  <table class="table table-responsive">
+                    <tr>
+                      <th rowspan="2" class="infoCol" style="width: 200px;">Truck Type</th>
+                      <th class="billCol" colspan="5">Bill Rate</th>
+                      <th class="payCol" colspan="3">Pay Rate</th>
+                    </tr>
+                    <tr>
+                      <td class="billCol">Weekday per Hr </td>
+                      <td class="billCol">Sat per Hr</td>
+                      <td class="billCol">Sun per Hr</td>
+                      <td class="billCol">per Ton</td>
+                      <td class="billCol">per Load</td>
+                      <td class="payCol">per Hour</td>
+                      <td class="payCol">per Ton</td>
+                      <td class="payCol">per Load</td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">End Dump</td>
+                      <td><input id="EDweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="EDSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="EDSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="EDton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="EDload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="EDpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="EDpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="EDpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Super Dump</td>
+                      <td><input id="SDweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="SDSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SDSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SDton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SDload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SDpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SDpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SDpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Double Bottom</td>
+                      <td><input type="number" id="DBweek" class=" billCol form-control newJob job-form has-value"
+                          value="100">
+                      </td>
+                      <td><input id="DBSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="DBSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="DBton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="DBload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="DBpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="DBpTon" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="DBpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Semi Bottom</td>
+                      <td><input id="SBweek" class=" billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="SBSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SBSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SBton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SBload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SBpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="SBpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="SBpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Ten Wheeler</td>
+                      <td><input id="TWweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="TWSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="TWSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="TWton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="TWload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="TWpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="TWpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="TWpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Flatbed</td>
+                      <td><input id="Fweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="FSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="FSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="Fton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="Fload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="FpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="Fpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="Fpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Highside</td>
+                      <td><input id="HSweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="HSSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="HSSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="HSton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="HSload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="HSpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="HSpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="HSpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                    <tr>
+                      <td class="infoCol" style="vertical-align: middle;">Transfer</td>
+                      <td><input id="Tweek" class="billCol form-control job-form newJob has-value" type="number"
+                          value="100">
+                      </td>
+                      <td><input id="TSat" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="TSun" class="billCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="Tton" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="Tload" class="billCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="TpHour" class="payCol form-control job-form newJob has-value" type="number"
+                          value="120">
+                      </td>
+                      <td><input id="Tpton" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                      <td><input id="Tpload" class="payCol form-control job-form newJob has-value" type="number"
+                          value=""></td>
+                    </tr>
+                  </table>
+                  <button id="update" class="md-btn md-raised m-b-sm w-xs update red" style="float: right">Lock</button>
+                  <button id="edit" class="md-btn md-raised m-b-sm w-xs change green" style="float: right">Edit</button>
+
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 form-control-label">Notes</label>
+                <div class="col-sm-4"> <textarea id="notes" class="form-control col-sm-10" rows="5"></textarea> </div>
+                <div class="col-sm-7">
+                  <p>Note History</p>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 form-control-label">Documents</label>
+                <div class="form-file col-sm-2">
+                  <input type="file">
+                  <button class="btn white" disabled>Select file ...</button>
+                </div>
+                <div class="col-sm-9">
+                  <p>Uploaded Documents </p>
+                </div>
+              </div>
+
+              <div class="row" style="padding-bottom: 10px;">
+                <div class="col-md-9"></div>
+                <div class="col-md-3" style="float:right;">
+                  <button type="button" class="btn danger p-x-md" id="cancelJob">Cancel</button>
+                  <button type="button" id="saveJob" class="btn success p-x-md">Save</button>
+                  <button type="button" id="updateJob" class="btn warning p-x-md" style="display:none">Update</button>
+                </div>
+              </div>
+            </div>
+            <div id="dispatchData" class="box" style="padding: 10px 10px 0px 10px;">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 btn-group-justified row">
+                  <button id="cpre5" class="btn btn-outline b-accent raisedDate light-blue-500 col-sm-1"><i
+                      class="fa fa-angle-double-left"></i></button>
+                  <button id="cyest" class="btn btn-outline b-accent raisedDate light-blue-300 col-sm-1"><i
+                      class="fa fa-angle-left"></i></button>
+                  <input id="cDispDate" type="text" class="btn btn-outline b-success col-sm-6 rounded raisedDate">
+                  <button id="ctomm" class="btn btn-outline b-primary raisedDate blue-A100 col-sm-1"><i
+                      class="fa fa-angle-right"></i></button>
+                  <button id="cnex5" class="btn btn-outline b-primary raisedDate blue-A200 col-sm-1"><i
+                      class="fa fa-angle-double-right"></i></button>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+              <div class="blue-100 m-t-1 ">
+                <span id="cust-id" class="custheader btn"></span> -
+                <span id="cust-name" class="custheader btn"></span> /
+                <span id="job-id" class="custheader btn"> </span> -
+                <span id="job-name" class="custheader btn"> </span> /
+                <span id="job-loc" class="custheader btn"> </span> /
+                <span id="job-type" class="custheader btn"> </span>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="input-group m-t ">
+                    <span class="input-group-addon">Point A</span>
+                    <input type="text" id="loca" class="form-control" placeholder="Job Site/Pickup Site">
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="input-group m-t">
+                    <span class="input-group-addon">Point B</span>
+                    <input type="text" id="locb" class="form-control" placeholder="Job Site/Dump Site">
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <input type="text" id="bRate" class=" m-t form-control" placeholder="Bill Rate" disabled>
+                </div>
+                <div class="col-md-1">
+                  <button id="pointSwap" class="btn m-t btn-warning pull-right"><span class="m-t"><i
+                        class="fa fa-arrows-h"></i></span></button>
+                </div>
+              </div>
+              <div class="p-t">
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="input-group-btn dropdown ">
+                      <button id="ttype" class="btn white dropdown-toggle addDisp" data-toggle="dropdown"
+                        style="width: 100%;">Truck Type<span class="caret"></span></button>
+                      <div class="dropdown-menu">
+                        <button class="dropdown-item ttype" href="#" value="End-Dump">End-Dump</button>
+                        <button class="dropdown-item ttype" href="#" value="Super-Dump">Super-Dump</button>
+                        <button class="dropdown-item ttype" href="#" value="Double-Bottom">Double-Bottom</button>
+                        <button class="dropdown-item ttype" href="#" value="Semi-Bottom">Semi-Bottom</button>
+                        <button class="dropdown-item ttype" href="#" value="10-wheeler">10-wheeler</button>
+                        <button class="dropdown-item ttype" href="#" value="Flatbed">Flatbed</button>
+                        <button class="dropdown-item ttype" href="#" value="Highside">Highside</button>
+                        <button class="dropdown-item ttype" href="#" value="Transfer">Transfer</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group ">
+                      <span class="input-group-addon ">Time</span>
+                      <input type="text" id="time" class="form-control addDisp" placeholder="00:00">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group ">
+                      <span class="input-group-addon ">Rate</span>
+                      <input type="number" id="Custprate" class="form-control addDisp" placeholder="$$$">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group ">
+                      <span class="input-group-addon">Quantity</span>
+                      <input type="number" id="qty" class="form-control addDisp" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group ">
+                      <span class="input-group-addon">Repeat</span>
+                      <input type="number" id="Reap" class="form-control addDisp" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <input type="text" id="material" class="form-control addDisp" placeholder="material">
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn success add-row addDisp">
+                      <span><i class="fa fa-plus"></i> Add</span>
+                    </button>
+                  </div>
+                </div>
+                <table class="table table-striped" id="CDispatchTable">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Time</th>
+                      <th>Truck-Type</th>
+                      <th>Rate</th>
+                      <th>Driver</th>
+                      <th>Truck</th>
+                      <th>Freight Bill</th>
+                      <th>Status</th>
+                      <th>Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Dispatchw">
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-1 form-control-label">Comments</label>
+                <div class="col-sm-4"> <textarea id="comments" class="form-control col-sm-10" rows="5"></textarea>
+                </div>
+                <div class="col-sm-7">
+                  <p>Comments History</p>
+                </div>
+              </div>
+
+
+              <div class="row" style="padding-bottom: 10px;">
+                <div class="col-md-10"></div>
+                <div class="col-md-2" style="float:right;">
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="box" id="jobsData" style="display: none; padding: 10px 10px 0px 10px;">
+              <table id='jobsInvoices' class="table">
+                <thead>
+                  <tr>
+                    <th>Invoice No</th>
+                    <th>Inv Date</th>
+                    <th>Customer / Broker</th>
+                    <th>Total</th>
+                    <th>Tags</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+
+
+        </div> <!-- end of page content  -->
+
+        <!-- Add.modal -->
+        <div id="m-a-a" class="modal fade animate" data-backdrop="true">
+          <div class="modal-dialog" id="animate">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Add New customer</h5>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="customerId" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="customerName" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">location</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="clocation" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Phone</label>
+                  <div class="col-sm-10">
+                    <input type="number" id="cPhone" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" id="cEmail" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                <button type="button" id="saveCustomer" class="btn success p-x-md" data-dismiss="modal">Save</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+        <!-- / .modal -->
+        <!-- Edit.modal -->
+        <div id="m-a-b" class="modal fade animate" data-backdrop="true">
+          <div class="modal-dialog" id="animate">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Edit customer</h5>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="eCustomerId" class="form-control" disabled>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="eCustomerName" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">location</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="eClocation" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Phone</label>
+                  <div class="col-sm-10">
+                    <input type="number" id="eCPhone" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" id="eCEmail" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 form-control-label">Status</label>
+                  <div class="dropdown col-md-4 inline">
+                    <button class="btn white dropdown-toggle" id="cStat" data-toggle="dropdown"
+                      aria-expanded="false"></button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item cStat" id="Active" href="#">Active</a>
+                      <a class="dropdown-item cStat" id="Archieve" href="#">Archieve</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                <button type="button" id="updateCustomer" class="btn success p-x-md"
+                  data-dismiss="modal">Update</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+        <!-- / .modal -->
+        <!---->
+        <div id="boxjobDetls" class="modal fade animate" data-backdrop="true" style="display: none">
+          <div class="modal-dialog modal-lg" id="animate">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="CustomerJobs">Add New Job</h5>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <div class="row">
+                  <div class="form-group col-md-4 row">
+                    <label class="col-sm-3 form-control-label">Job ID</label>
+                    <div class="col-sm-9">
+                      <input type="text" id="job_id" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-8 row">
+                    <label class="col-sm-2 form-control-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" id="job_name" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4 row">
+                    <label class="col-sm-3 form-control-label">Start Date</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="startDate">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-8 row">
+                    <label class="col-sm-2 form-control-label">Location</label>
+                    <div class="col-sm-10">
+                      <input type="text" id="job_location" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="dropdown col-md-4 inline">
+                    <button class="btn white dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Job
+                      Type</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Hourly</a>
+                      <a class="dropdown-item" href="#">Ton</a>
+                      <a class="dropdown-item" href="#">Load</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                <button type="button" id="saveJob" class="btn success p-x-md" data-dismiss="modal">Save</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+
+        <!-- show drivers to assign  -->
+        <div id="EDDriver" class="modal fade animate" data-backdrop="true" style="display: none">
+          <div class="modal-dialog assigDriver" id="animate">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="CustomerJobs">Available <span id="selectedTT"></span> Drivers</h5>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <table id="Drivers" class="table table-striped b-t">
+                  <thead>
+                    <tr>
+                      <th>Driver Name</th>
+                      <th>Truck Id</th>
+                      <th>Total Tucks</th>
+                    </tr>
+                  </thead>
+                  <tbody id="EDDrivers">
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+
+              </div>
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+
+        <!-- Inv Print Modal  -->
+        <div id="InvoiceModal" class="modal black-overlay in" data-backdrop="true" style="display: none;">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-body text-center p-lg printable">
+                <a href="#" class="btn btn-info pull-right hidden-print" onClick="window.print();"><i
+                    class="fa fa-print"> Print </i></a>
+                <button class="btn danger non-printable pull-right m-r-1" id='archiveInv'><i
+                    class="fa fa-trash"></i></button>
+
+                <div class="row">
+                  <div class="col-xs-6 text-left">
+                    <h4 class="text-md m-t-lg" id="">Meega Trucking</h4>
+                    <p><a href="http://www.meegatrucnz.com">www.meegatrucnz.com</a></p>
+                    <p><br>
+                      <br>
+
+                    </p>
+                    <p>
+                      <br>
+
+                    </p>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="text-md m-t-lg"><span>Invoice ID : </span><span id="invId" class="invForm"></span></p>
+                    <p><span>Date : </span> <span id="invDate" class="invForm "></span></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="p-a">
+                      <strong class="text-muted">TO:</strong><br>
+                      <span id="custName" class="invForm"></span>
+                      <p class="text-muted">
+                        <span id="add1" class="invForm"></span><br>
+                        <span id="add2" class="invForm"></span><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                </br>
+                </br>
+                </br>
+                <div class="table-responsive">
+                  <table class="table table-striped white b-a">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Freight Bill</th>
+                        <th style="width: 140px">QTY</th>
+                        <th style="width: 90px">TOTAL</th>
+                      </tr>
+                    </thead>
+                    <tbody id="QTYTotal" style=" text-align: left;">
+
+                    </tbody>
+                  </table>
+                </div>
+                <div style="height:300px !important;">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- ############ PAGE END-->
+
+      </div>
+    </div>
+    <!-- / -->
+
+
+    <!-- ############ SWITHCHER START-->
+    <div id="switcher">
+      <div class="switcher dark-white" id="sw-theme">
+        <a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme" class="dark-white sw-btn">
+          <i class="fa fa-gear text-muted"></i>
+        </a>
+        <div class="box-header">
+          <a href="https://themeforest.net/item/aside-dashboard-ui-kit/17903768?ref=flatfull"
+            class="btn btn-xs rounded danger pull-right">BUY</a>
+          <strong>Theme Switcher</strong>
+        </div>
+        <div class="box-divider"></div>
+        <div class="box-body">
+          <p id="settingLayout" class="hidden-md-down">
+            <label class="md-check m-y-xs" data-target="folded">
+              <input type="checkbox">
+              <i></i>
+              <span>Folded Aside</span>
+            </label>
+            <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
+              <span class="fa fa-expand fa-fw m-r-xs"></span>
+              <span>Fullscreen Mode</span>
+            </label>
+          </p>
+          <p>Colors:</p>
+          <p data-target="color">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="primary">
+              <i class="primary"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="accent">
+              <i class="accent"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warn">
+              <i class="warn"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="success">
+              <i class="success"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="info">
+              <i class="info"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="warning">
+              <i class="warning"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+              <input type="radio" name="color" value="danger">
+              <i class="danger"></i>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="clearfix">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-lg">
+              <input type="radio" name="theme" value="">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="grey">
+              <i class="grey"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="dark">
+              <i class="dark"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="black">
+              <i class="black"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ############ SWITHCHER END-->
+
+    <!-- ############ LAYOUT END-->
+  </div>
+
+  <!-- build:js scripts/app.min.js -->
+  <!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+  <!-- table to json  -->
+  <script src="libs/jquery/dist/TableToJson.min.js"></script>
+  <!-- datatable -->
+  <script src="libs/DataTables/datatables.js"></script>
+  <!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+  <script src="libs/blockUI/jquery.blockUI.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-modal.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-list.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/ajax.js"></script>
+
+  <script src="scripts/customers.js"></script>
+  <script src="scripts/dispatch.js"></script>
+
+
+  <!-- xdan date time picker -->
+  <script src="libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+
+  <!-- momet js -->
+  <script src="libs/moment/moment.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

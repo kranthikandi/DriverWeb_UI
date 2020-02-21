@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meega Trucking - Employee Page</title>
+  <meta name="description" content="Responsive, Bootstrap, BS4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  <!-- DataTable -->
+  <link rel="stylesheet" href="libs/DataTables/datatables.css" type="text/css" />
+  <!-- xdan date time picker -->
+  <!-- documentation https://xdsoft.net/jqplugins/datetimepicker/ -->
+  <link href="libs/datetimepicker-master/build/jquery.datetimepicker.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app" id="app">
+
+    <!-- ############ LAYOUT START-->
+
+    <!-- aside -->
+    <div id="aside" class="app-aside fade nav-dropdown black">
+      <!-- fluid app aside -->
+      <div class="navside dk" data-layout="column">
+        <div class="navbar no-radius">
+          <!-- brand -->
+          <a href="dashboard.html" class="navbar-brand">
+            <div data-ui-include="'images/logo.svg'"></div>
+            <img src="images/logo.png" alt="." class="hide">
+            <span class="hidden-folded inline">Meega Trucking</span>
+          </a>
+          <!-- / brand -->
+        </div>
+        <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
+            <ul class="nav" data-ui-nav>
+              <li class="nav-header hidden-folded">
+                <span class="text-xs">Main</span>
+              </li>
+              <li>
+                <a class="b-danger">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade danger">
+                    <i class="fa fa-users"></i>
+                  </span>
+                  <span class="nav-text">Directory</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="customer.html">
+                      <span class="nav-text">Customers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="driver.html">
+                      <span class="nav-text">IC Driver</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="employee.html">
+                      <span class="nav-text">Employee</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-success">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="ion-android-apps"></i>
+                  </span>
+                  <span class="nav-text">Dispatch</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="dispatch.html">
+                      <span class="nav-text">Dispatch</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="FrightBills.html">
+                      <span class="nav-text">FreightBills</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="invoice.html">
+                      <span class="nav-text">Invoice</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="b-warning">
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon text-white no-fade">
+                    <i class="fa fa-dollar"></i>
+                  </span>
+                  <span class="nav-text">Accounts</span>
+                </a>
+                <ul class="nav-sub nav-mega nav-mega-3">
+                  <li>
+                    <a href="receivable.html">
+                      <span class="nav-text">Receivables</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="payable.html">
+                      <span class="nav-text">Payables</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <div data-flex-no-shrink class="sw">
+          <div class="nav-fold ">
+            <a>
+              <div class="pull-left">
+                <div class="">
+                  <label class="md-check m-y-xs" data-target="folded">
+                    <input type="checkbox">
+                    <i></i>
+                  </label>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / -->
+
+    <!-- content -->
+    <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
+      <div class="app-header white bg b-b">
+        <div class="navbar" data-pjax>
+          <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
+            <i class="ion-navicon"></i>
+          </a>
+          <div class="navbar-item pull-left h5" id="pageTitle">Employees</div>
+          <!-- nabar right -->
+          <ul class="nav navbar-nav pull-right">
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link" data-toggle="dropdown">
+                <i class="ion-android-search w-24"></i>
+              </a>
+              <div class="dropdown-menu text-color w-md animated fadeInUp pull-right">
+                <!-- search form -->
+                <form class="navbar-form form-inline navbar-item m-a-0 p-x v-m" role="search">
+                  <div class="form-group l-h m-a-0">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search projects...">
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn white b-a no-shadow"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+                <!-- / search form -->
+              </div>
+            </li>
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link clear" data-toggle="dropdown" style="width:40px;">
+                <i class="fa fa-bullhorn w-24"></i>
+                <span class="label up p-a-0" id="dispCount" style="color:red;background-color:white"></span>
+              </a>
+              <!-- dropdown -->
+              <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
+                <div class="scrollable" style="max-height: 220px">
+                  <ul id="dispJobs" class="list-group list-group-gap m-a-0">
+                  </ul>
+                </div>
+                <div class="scrollable" style="max-height: 220px">
+                  <a href="dispatch.html" class="red pull-right">Dispatch</a>
+                </div>
+              </div>
+              <!-- / dropdown -->
+            </li>
+            <li class="nav-item dropdown pos-stc-xs">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <i class="ion-android-notifications-none w-24"></i>
+                <span class="label up p-a-0 danger"></span>
+              </a>
+              <!-- dropdown -->
+              <div class="dropdown-menu pull-right w-xl animated fadeIn no-bg no-border no-shadow">
+                <div class="scrollable" style="max-height: 220px">
+                  <ul class="list-group list-group-gap m-a-0">
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a0.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        Use awesome <a href="#" class="text-primary">animate.css</a><br>
+                        <small class="text-muted">10 minutes ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a1.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Joe</a> Added you as friend<br>
+                        <small class="text-muted">2 hours ago</small>
+                      </span>
+                    </li>
+                    <li class="list-group-item dark-white text-color box-shadow-z0 b">
+                      <span class="pull-left m-r">
+                        <img src="images/a2.jpg" alt="..." class="w-40 img-circle">
+                      </span>
+                      <span class="clear block">
+                        <a href="#" class="text-primary">Danie</a> sent you a message<br>
+                        <small class="text-muted">1 day ago</small>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- / dropdown -->
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link clear" data-toggle="dropdown">
+                <span class="avatar w-32">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+                    <circle cx="24" cy="24" r="24" />
+                    <circle cx="24" cy="0" r="2" class="brand-animate" />
+                    <text id="UserN" dy="10" x="50%" y="50%" text-anchor="middle"
+                      style="fill: #ffffff; stroke: none; font-size: 30px;"></text>
+                  </svg>
+                </span>
+              </a>
+              <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                <a class="dropdown-item" href="dashboard.html">
+                  <span>Dashboard</span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <a class="dropdown-item" href="">
+                  <span></span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="">
+                  <!-- Need help? -->
+                </a>
+                <a class="dropdown-item" href="" id="signOut">Sign out</a>
+              </div>
+            </li>
+          </ul>
+          <!-- / navbar right -->
+        </div>
+      </div>
+      <div class="app-footer white bg p-a b-t">
+        <div class="pull-right text-sm text-muted">Version 1.0.1</div>
+        <span class="text-sm text-muted">&copy; Copyright.</span>
+      </div>
+      <div class="app-body">
+
+        <!-- ############ PAGE START-->
+        <!-- only need a height for layout 4 -->
+        <div class="padding">
+          <div class="box">
+            <div class="b-b b-primary nav-active-primary m-t-1 m-l-1">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" data-toggle="tab" data-target="#employee">Employees</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tab" data-target="#Drivers">Drivers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tab" data-target="#fleet">Fleet</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content m-b-md">
+              <div class="tab-pane animated fadeIn text-muted active" id="employee">
+                <div class="addNew">
+                  <button id="empAdd" class="btn btn-outline rounded b-primary text-primary">Add New</button>
+                </div>
+                <table id="empTab" class="table">
+                  <thead>
+                    <tr>
+                      <th>Emp ID</th>
+                      <th>Emp Name</th>
+                      <th>Emp Since</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tab-pane animated fadeIn text-muted" id="Drivers">
+                <div class="addNew">
+                  <button id="addNewDriver" data-toggle="modal" data-target="#NewDriver"
+                    class="btn btn-outline rounded b-primary text-primary">Add
+                    New</button>
+                </div>
+                <table id="DriverTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Driver ID</th>
+                      <th>Driver Name</th>
+                      <th>Emp Since</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tab-pane animated fadeIn text-muted" id="fleet">
+                <div class="addNew">
+                  <button id="fleetAdd" class="btn btn-outline rounded b-primary text-primary">Add New</button>
+                </div>
+                <table id="FleetTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Truck ID</th>
+                      <th>Truck Type</th>
+                      <th>Registration</th>
+                      <th>License</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <!-- .modal -->
+          <div id="NewEmp" class="modal fade animate" data-backdrop="true">
+            <div class="modal-dialog modal-md" id="animate">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">New Employee</h5>
+                </div>
+                <div class="modal-body text-center p-lg">
+                  <div class="form-group row">
+                    <label class="col-sm-1 form-control-label">ID</label>
+                    <div class="col-sm-3">
+                      <input type="text" id="newEmpId" class="form-control" disabled>
+                    </div>
+                    <label class="col-sm-1 form-control-label">Name</label>
+                    <div class="col-sm-7">
+                      <input type="text" id="newEmpName" class="form-control clear">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-1 form-control-label">Role</label>
+                    <div class="col-sm-3">
+                      <div class="dropdown inline">
+                        <button class="btn white dropdown-toggle eRoleSelected" data-toggle="dropdown"
+                          aria-expanded="true">Select</button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item eRole" id='Admin'>Admin</a>
+                          <a class="dropdown-item eRole" id='Manager'>Manager</a>
+                          <a class="dropdown-item eRole" id="Dispatcher">Dispatcher</a>
+                          <a class="dropdown-item eRole" id="Accounts">Accounts</a>
+                          <a class="dropdown-item eRole" id="Driver">Driver</a>
+                          <a class="dropdown-item eRole" id="Other">Other</a>
+                        </div>
+                      </div>
+                    </div>
+                    <label class="col-sm-2 form-control-label">Hire Date</label>
+                    <div class="col-sm-6">
+                      <input id="HireDate" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                  <button type="button" id="saveEmp" class="btn success p-x-md" data-dismiss="modal">Save</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div>
+          </div>
+          <!-- / .modal -->
+          <!-- .modal -->
+          <div id="NewDriver" class="modal fade animate" data-backdrop="true">
+            <div class="modal-dialog modal-lg" id="animate">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">New Driver</h5>
+                </div>
+                <div class="modal-body text-center p-lg">
+                  <div id='Driver' class="box p-t-1">
+                    <div class="row p-l-1">
+                      <div class="col-md-2">
+                        <div class="input-group">
+                          <span class="input-group-addon">ID</span>
+                          <input type="text" placeholder="ID" id="IcDriverId" class="form-control job-form ccfrm"
+                            required disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="input-group">
+                          <span class="input-group-addon">Name <span class="text-danger">*</span></span>
+                          <input type="text" placeholder="Name" id="IcDriverName" class="form-control job-form ccfrm"
+                            required>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="col-sm-4 form-control-label">Hire Date</label>
+                        <div class="col-sm-8">
+                          <input id="" class="HireDate form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="dropdown inline">
+                          <button class="btn dropdown-toggle eThisEStatus ccfrm btn-success" data-toggle="dropdown"
+                            aria-expanded="false" value="">Select</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item eStatusthis" id="Active">Active</a>
+                            <a class="dropdown-item eStatusthis" id="Hold">Hold</a>
+                            <a class="dropdown-item eStatusthis" id="Archive">Archive</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-divider" style="background-color: #037cf54f !important"></div>
+                    <div class="m-a-1">
+                      <div class="b-b b-primary nav-active-primary">
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">Info</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">Freight Bills</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="tab" data-target="#tab6">Statements</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content p-t m-b-md">
+                        <div class="tab-pane animated fadeIn text-muted active" id="tab4">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                <span class="input-group-addon">Address</span>
+                                <input type="text" placeholder="1 meega way" id="address"
+                                  class="form-control job-form ccfrm" required>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">City</span>
+                                <input type="text" placeholder="city" id="city" class="form-control job-form ccfrm"
+                                  required>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">Zip</span>
+                                <input type="number" placeholder="00000" id="zip" class="form-control job-form ccfrm"
+                                  required>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row p-t-1">
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">SSN</span>
+                                <input type="text" placeholder="XXX-XX-XXXX" id="ssn"
+                                  class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">Tax ID</span>
+                                <input type="text" placeholder="XX-XXXXXXXX" id="taxid"
+                                  class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">Pay Hr <span class="text-danger">*</span></span>
+                                <input type="number" placeholder="%%" id="payHr" class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">Pay % <span class="text-danger">*</span></span>
+                                <input type="number" placeholder="%%" id="payPer" class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row p-t-1">
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                <span class="input-group-addon">License ID</span>
+                                <input type="text" placeholder="ID" id="Lid" class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="input-group">
+                                <span class="input-group-addon">Expiration</span>
+                                <input type="text" placeholder="MM/DD/YYYY" id="lExp"
+                                  class="form-control job-form ccfrm">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane animated fadeIn text-muted" id="tab5">
+                          <table id="DriverFtbTable" class="table">
+                            <thead>
+                              <tr>
+                                <th>FTBill</th>
+                                <th>Date</th>
+                                <th>Job ID</th>
+                                <th>Net Paid</th>
+                                <th>Gross Paid</th>
+                                <th>Status</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                        <div class="tab-pane animated fadeIn text-muted" id="tab6">
+                          <table id="DriverStmtTable" class="table">
+                            <thead>
+                              <tr>
+                                <th>Statement ID</th>
+                                <th>Date</th>
+                                <th>Check</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                  <button type="button" id="UpdateDriver" class="btn primary p-x-md" data-dismiss="modal"
+                    style="display: none;">Update</button>
+                  <button type="button" id="saveDriver" class="btn success p-x-md" data-dismiss="modal">Save</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div>
+          </div>
+          <!-- / .modal -->
+          <!-- .modal -->
+          <div id="NewTruck" class="modal fade animate" data-backdrop="true">
+            <div class="modal-dialog modal-md" id="animate">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">New Truck</h5>
+                </div>
+                <div class="modal-body text-center p-lg">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">ID</span>
+                        <input type="number" placeholder="0000" id="TruID" class="form-control job-form ccfrm">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">License</span>
+                        <input type="text" placeholder="00000000" id="TruLic" class="form-control job-form ccfrm">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row m-t-1">
+                    <div class="col-md-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">Registration</span>
+                        <input type="text" placeholder="MM-DD-YYYY" id="TruReg" class="form-control job-form ccfrm">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dropdown inline">
+                        <button id="ttype" class="btn white dropdown-toggle job-form ccfrm" id="Truck_type"
+                          data-toggle="dropdown" aria-expanded="false">Truck Type </button>
+                        <div class="dropdown-menu">
+                          <button class="dropdown-item ttype" href="#" value="End-Dump">End-Dump</button>
+                          <button class="dropdown-item ttype" href="#" value="Super-Dump">Super-Dump</button>
+                          <button class="dropdown-item ttype" href="#" value="Double-Bottom">Double-Bottom</button>
+                          <button class="dropdown-item ttype" href="#" value="10-wheeler">10-wheeler</button>
+                          <button class="dropdown-item ttype" href="#" value="Flatbed">Flatbed</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dropdown inline">
+                        <button class="btn white dropdown-toggle truStat" data-toggle="dropdown"
+                          aria-expanded="true">Select</button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item struStat" value='Available'>Available</a>
+                          <a class="dropdown-item struStat" value='Assigned'>Assigned</a>
+                          <a class="dropdown-item struStat" value="Service">Service</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+                  <button type="button" id="saveTru" class="btn success p-x-md" data-dismiss="modal">Save</button>
+                  <button type="button" id="UpdateTru" class="btn warning p-x-md" style="display:none"
+                    data-dismiss="modal">Update</button>
+                </div>
+              </div>
+
+            </div><!-- /.modal-content -->
+          </div>
+        </div>
+        <!-- / .modal -->
+        <!-- .modal -->
+        <div id="showEmp" class="modal fade animate" data-backdrop="true">
+          <div class="modal-dialog modal-lg" id="animate">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title showEmpTitle clear"></h5>
+              </div>
+              <div class="modal-body text-center p-lg">
+                <div class="form-group row">
+                  <div class="col-sm-2">
+                    <div class="input-group m-b">
+                      <span class="input-group-btn">
+                        <button class="btn white " type="button">ID</button>
+                      </span>
+                      <input type="text" id="EmpId" class="form-control clear" disabled>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="input-group m-b">
+                      <span class="input-group-btn">
+                        <button class="btn white" type="button">Name</button>
+                      </span>
+                      <input type="text" id="empName" class="form-control clear" disabled>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="dropdown inline">
+                      <button class="btn white dropdown-toggle ThisERole clear" data-toggle="dropdown"
+                        aria-expanded="true"></button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item eRolethis" id='Admin'>Admin</a>
+                        <a class="dropdown-item eRolethis" id='Manager'>Manager</a>
+                        <a class="dropdown-item eRolethis" id="Dispatcher">Dispatcher</a>
+                        <a class="dropdown-item eRolethis" id="Accounts">Accounts</a>
+                        <a class="dropdown-item eRolethis" id="Driver">Driver</a>
+                        <a class="dropdown-item eRolethis" id="Other">Other</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="dropdown inline">
+                      <button class="btn white dropdown-toggle ThisEStatus clear" data-toggle="dropdown"
+                        aria-expanded="true"></button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item eStatusthis" id='Active'>Active</a>
+                        <a class="dropdown-item eStatusthis" id='Hold'>Hold</a>
+                        <a class="dropdown-item eStatusthis" id="Archive">Archive</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-divider"></div>
+
+                <div class="b-b b-primary nav-active-primary">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#" data-toggle="tab" data-target="#general"
+                        aria-expanded="false">General</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-toggle="tab" data-target="#account"
+                        aria-expanded="false">Accounts</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content p-a m-b-md">
+                  <div class="tab-pane animated fadeIn text-muted active" id="general" aria-expanded="false">
+                    <div class="form-group row">
+                      <div class="col-sm-6">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Address</button>
+                          </span>
+                          <input type="text" id="empAddress" class="form-control clear">
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Social / Tax ID</button>
+                          </span>
+                          <input type="text" id="empSocial" class="form-control clear">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Rate $ </button>
+                          </span>
+                          <input type="number" id="empRate" class="form-control clear">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane animated fadeIn text-muted" id="account" aria-expanded="false">
+                    <div class="form-group row">
+                      <div class="col-sm-3">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Week</button>
+                          </span>
+                          <input id="empWeek" class="form-control clear">
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Hours</button>
+                          </span>
+                          <input type="number" id="empHours" class="form-control clear">
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Pay $ </button>
+                          </span>
+                          <input type="number" id="empPay" class="form-control clear">
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="input-group m-b">
+                          <span class="input-group-btn">
+                            <button class="btn white" type="button">Check # </button>
+                          </span>
+                          <input type="number" id="empCheck" class="form-control clear">
+                        </div>
+                      </div>
+                    </div>
+                    <table class="table" id="EmpAcountTab">
+                      <thead>
+                        <tr>
+                          <th>Week</th>
+                          <th>Hours</th>
+                          <th>Amount</th>
+                          <th>Check # </th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn danger p-x-md" data-dismiss="modal">Close</button>
+                  <button type="button" id="updateEmp" class="btn success p-x-md" data-dismiss="modal">Update</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div>
+          </div>
+          <!-- / .modal -->
+          <!-- ############ PAGE END-->
+
+        </div>
+      </div>
+      <!-- / -->
+
+
+      <!-- ############ SWITHCHER START-->
+      <div id="switcher">
+        <div class="switcher dark-white" id="sw-theme">
+          <a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme" class="dark-white sw-btn">
+            <i class="fa fa-gear text-muted"></i>
+          </a>
+          <div class="box-header">
+            <a href="https://themeforest.net/item/aside-dashboard-ui-kit/17903768?ref=flatfull"
+              class="btn btn-xs rounded danger pull-right">BUY</a>
+            <strong>Theme Switcher</strong>
+          </div>
+          <div class="box-divider"></div>
+          <div class="box-body">
+            <p id="settingLayout" class="hidden-md-down">
+              <label class="md-check m-y-xs" data-target="folded">
+                <input type="checkbox">
+                <i></i>
+                <span>Folded Aside</span>
+              </label>
+              <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
+                <span class="fa fa-expand fa-fw m-r-xs"></span>
+                <span>Fullscreen Mode</span>
+              </label>
+            </p>
+            <p>Colors:</p>
+            <p data-target="color">
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="primary">
+                <i class="primary"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="accent">
+                <i class="accent"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="warn">
+                <i class="warn"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="success">
+                <i class="success"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="info">
+                <i class="info"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="warning">
+                <i class="warning"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                <input type="radio" name="color" value="danger">
+                <i class="danger"></i>
+              </label>
+            </p>
+            <p>Themes:</p>
+            <div data-target="bg" class="clearfix">
+              <label class="radio radio-inline m-a-0 ui-check ui-check-lg">
+                <input type="radio" name="theme" value="">
+                <i class="light"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+                <input type="radio" name="theme" value="grey">
+                <i class="grey"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+                <input type="radio" name="theme" value="dark">
+                <i class="dark"></i>
+              </label>
+              <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+                <input type="radio" name="theme" value="black">
+                <i class="black"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ############ SWITHCHER END-->
+
+      <!-- ############ LAYOUT END-->
+    </div>
+
+    <!-- build:js scripts/app.min.js -->
+    <!-- jQuery -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- table to json  -->
+    <script src="libs/jquery/dist/TableToJson.min.js"></script>
+    <!-- datatable -->
+    <!-- <script src="libs/DataTables/datatables.js"></script> -->
+    <script src="libs/DataTables/datatables.js"></script>
+    <!-- Bootstrap -->
+    <script src="libs/tether/dist/js/tether.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- core -->
+    <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+    <script src="libs/PACE/pace.min.js"></script>
+    <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+    <script src="libs/blockUI/jquery.blockUI.js"></script>
+    <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+
+    <script src="scripts/config.lazyload.js"></script>
+    <script src="scripts/ui-load.js"></script>
+    <script src="scripts/ui-jp.js"></script>
+    <script src="scripts/ui-include.js"></script>
+    <script src="scripts/ui-device.js"></script>
+    <script src="scripts/ui-form.js"></script>
+    <script src="scripts/ui-modal.js"></script>
+    <script src="scripts/ui-nav.js"></script>
+    <script src="scripts/ui-list.js"></script>
+    <script src="scripts/ui-screenfull.js"></script>
+    <script src="scripts/ui-scroll-to.js"></script>
+    <script src="scripts/ui-toggle-class.js"></script>
+    <script src="scripts/ui-taburl.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/ajax.js"></script>
+
+    <script src="scripts/employee.js"></script>
+
+
+    <!-- xdan date time picker -->
+    <script src="libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+
+    <!-- momet js -->
+    <script src="libs/moment/moment.js"></script>
+    <!-- endbuild -->
+
+    <!-- underscore JS -->
+    <script src="libs/underscore/underscore-min.js"></script>
+</body>
+
+</html>

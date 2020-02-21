@@ -1,0 +1,268 @@
+.brand-animate {
+    -webkit-animation: rotate 1s infinite linear;
+    animation: rotate 1s infinite linear;
+
+    transform-origin: 24px 24px;
+    -webkit-transform-origin: 24px 24px;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-transition: all 0.3s ease-in-out;
+  	transition: all 0.3s ease-in-out;
+
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.pace-running .brand-animate{
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.pace-done .brand-animate{
+    opacity: 0;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.addNew1{
+  z-index: 1000;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    width: 240px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+.infoText{
+  color: inherit !important;
+  opacity: 0.6;
+  margin-bottom: 0px !important;
+}
+
+.jobs{
+  z-index: 1000;
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  -webkit-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+  background-clip: padding-box;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border-radius: 50%;
+  font-size: 25px;
+}
+.addNew{
+  text-align: right;
+  padding: 10px 10px 0px 10px;
+}
+.headercrumb{
+  background-color:transparent;
+  padding: 0%;
+  margin: 0%;
+  padding-left: 50px;
+}
+.smallButton{
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 25px !important;
+  z-index: 50;
+  left: 5px;
+  top: -55px;
+}
+.Assigned{
+  color: red;
+  cursor: not-allowed;
+}
+.Available{
+  color: green;
+  cursor: pointer;
+}
+.raisedDate{
+  box-shadow: -12px 11px 20px 1px rgba(0, 0, 0, 0.26) !important;
+  margin-right:10px; 
+}
+.noJob{
+  background-color: orangered;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 5%;
+  width: 40%;
+  text-align: center;
+}
+
+.open > .tagSearch{
+  display: block;
+}
+
+.tagSearch{
+    transform-origin: top left;
+    position: absolute;
+    top: 0%;
+    left: 10px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 1rem;
+    color: #373a3c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    box-shadow: -15px 15px 10px 5px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02);
+}
+
+.ftid{
+  cursor: pointer;
+}
+.ddFont{
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #0e85e870;
+}
+
+.invthis{
+  cursor: pointer;
+}
+
+.viewTag{
+  cursor: pointer;
+  text-decoration-line: underline
+}
+
+.pointernone{
+  pointer-events: none;
+}
+#invthisWeek{
+  cursor: pointer;
+}
+@media print
+{
+    .non-printable { display: none; }
+    .printable { display: block; }
+}
+
+.fixedDiv_300{
+  height:300px;
+   overflow:auto;
+}
+
+#newclick, #clickJob{
+  cursor: pointer;
+  color: #537895;
+  background-color: #eee;
+  text-decoration-line: underline;
+}
+.invthisWeek, .driStatement {
+  padding: 3px;
+}
+.infoCol{
+  background-color: #87ced236;
+  color: #5f2c3d;
+  font-weight: bold
+}
+.billCol{
+  background-color: #ddd5cb87 !important;
+  color: #264393;
+}
+.payCol{
+  background-color: #1c466852 !important;
+  color: #138086;
+}
+#editclick{
+  cursor: pointer;
+}
+.AllBorder{
+  border: 1px solid #eee !important
+}
+.textbox_3{
+  float: left;
+  width: 33.33%
+}
+.textbox_5{
+  float: left;
+  width: 20%
+}
+.textbox_4{
+  float: left;
+  width: 25%
+}
+.textbox_2{
+    float: left;
+  width: 50%
+}
+.textbox_10{
+    float: left;
+  width: 83.33%
+}
+.error{
+  border-color: red;
+  color: red;
+}
+.archievedInv{
+  border: 2px solid red-600
+}
+.bdr-danger{
+  border: 1px solid red !important;
+}
+
+.dark-border{
+  border: 1px solid #00000098 !important;
+}
+.dark-border th,
+  .dark-border td {
+    border: 1px solid #00000098 !important;
+  }
+  #invTable th,
+   #invTable td {
+    border: 1px solid #00000098 !important;
+  }
+  
+  #qtyview th,
+   #qtyview td {
+    border: 1px solid #00000098 !important;
+  }
+
+.adddri,
+ .md-btn .md-fab{
+  line-height: inherit !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+  
+.NewFtCustSpan , .ui-autocomplete {
+  z-index:2147483647 !important;
+}

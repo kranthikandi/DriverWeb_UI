@@ -1,0 +1,9 @@
+sudo netstat -plten
+
+ sudo kill -9
+ 
+ sudo mongod --port 20202 --fork --logpath /var/log/mongod.log --bind_ip_all
+
+ sudo forever start -c 'npm start' ./
+
+ 
