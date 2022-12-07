@@ -11,7 +11,7 @@
   "license": "Envato REGULAR LICENSE",
   "dependencies": {
     "ejs": "^2.3.1",
-    "express": "^4.12.1",
+    "express": "^4.18.2",
     "include-tag": "^1.1.0",
     "jquery-datetimepicker": "^2.5.20",
     "jspdf": "^1.5.3",
@@ -34,7 +34,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.2",
     "grunt-usemin": "^3.1.1",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "lodash": "^4.17.15",
     "mime": ">=1.4.1",
     "minimatch": ">=3.0.2"
