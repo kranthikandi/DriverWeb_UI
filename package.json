@@ -11,7 +11,7 @@
   "license": "Envato REGULAR LICENSE",
   "dependencies": {
     "ejs": "^2.3.1",
-    "express": "^4.12.1",
+    "express": "^4.17.3",
     "include-tag": "^1.1.0",
     "jquery-datetimepicker": "^2.5.20",
     "jspdf": "^1.5.3",
